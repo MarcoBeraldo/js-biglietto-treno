@@ -21,16 +21,26 @@ const priceKm = 0.21
 
 let isValid = 'false';
 
-
-if (isNaN(userDistance)) {
+if (isNaN(userDistance || userAge)) {
     isValid = true;
-    console.log('la distanza non è valida');
+    console.log('il valore non è valido')
 }
 
-if (isNaN(userAge)) {
-    isValid = true;
-    console.log('l\'età non è valida');
-}
+
+
+
+
+
+
+// if (isNaN(userDistance)) {
+//     isValid = true;
+//     console.log('la distanza non è valida');
+// }
+
+// if (isNaN(userAge)) {
+//     isValid = true;
+//     console.log('l\'età non è valida');
+// }
 
 // calcolo il prezo del biglietto senza sconti
 
