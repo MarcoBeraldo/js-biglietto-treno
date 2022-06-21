@@ -27,7 +27,7 @@ if (isNaN(userDistance)) {
     console.log('la distanza non è valida');
 }
 
-if parseInt(isNaN(userAge)) {
+if (isNaN(userAge)) {
     isValid = true;
     console.log('l\'età non è valida');
 }
