@@ -21,16 +21,10 @@ const priceKm = 0.21
 
 let isValid = 'false';
 
-if (isNaN(userDistance || userAge)) {
+if (isNaN(userDistance) || isNaN(userAge)) {
     isValid = true;
     console.log('il valore non è valido')
 }
-
-
-
-
-
-
 
 // if (isNaN(userDistance)) {
 //     isValid = true;
@@ -42,7 +36,7 @@ if (isNaN(userDistance || userAge)) {
 //     console.log('l\'età non è valida');
 // }
 
-// calcolo il prezo del biglietto senza sconti
+// calcolo il prezzo del biglietto senza sconti
 
 let price = userDistance * 0.21
 console.log('il prezzo è: ' + price)
@@ -54,6 +48,8 @@ if (userAge > 65) {
     document.getElementById('result').innerHTML = ('Hai diritto a uno sconto del 40%, il prezzo è: ' + (price - price / 5 * 2).toFixed(2) + '€')
 } else if (userAge < 18) {
     document.getElementById('result').innerHTML = ('Hai diritto a uno sconto del 20%, il prezzo è: ' + (price - price / 5).toFixed(2) + '€')
-} else {
+} else if (userAge >= 18 && userAge <= 65) {
     document.getElementById('result').innerHTML = ('Il prezzo è: ' + price.toFixed(2) + '€')
+} else if (isValid = true) {
+    document.getElementById('result').innerHTML = ('Uno dei valori non è valido')
 }
