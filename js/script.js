@@ -7,11 +7,11 @@
 
 
 // chiedo i km
-const userDistance = (prompt('Distanza', 25));
+const userDistance = (prompt('Distanza'));
 console.log('userDistance: ' + userDistance);
 
 // chiedo l'età
-const userAge = (prompt('Età', 25));
+const userAge = (prompt('Età'));
 console.log('userAge:' + userAge);
 
 // prezzo al km
@@ -27,7 +27,7 @@ if (isNaN(userDistance)) {
     console.log('la distanza non è valida');
 }
 
-if (isNaN(userAge)) {
+if parseInt(isNaN(userAge)) {
     isValid = true;
     console.log('l\'età non è valida');
 }
