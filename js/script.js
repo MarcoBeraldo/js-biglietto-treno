@@ -19,7 +19,7 @@ const priceKm = 0.21
 
 // verifico se età e km sono numeri
 
-let isValid = 'true';
+let isValid = 'false';
 
 
 if (isNaN(userDistance)) {
@@ -40,14 +40,10 @@ console.log('il prezzo è: ' + price)
 
 // verifico se applicare gli sconti
 
-if (userAge < 18) {
-    document.getElementById('result').innerHTML = ('Hai diritto a uno sconto del 20%, il prezzo è: ' + (price - price / 5).toFixed(2) + '€')
-}
-
 if (userAge > 65) {
     document.getElementById('result').innerHTML = ('Hai diritto a uno sconto del 40%, il prezzo è: ' + (price - price / 5 * 2).toFixed(2) + '€')
-}
-
-else {
+} else if (userAge < 18) {
+    document.getElementById('result').innerHTML = ('Hai diritto a uno sconto del 20%, il prezzo è: ' + (price - price / 5).toFixed(2) + '€')
+} else {
     document.getElementById('result').innerHTML = ('Il prezzo è: ' + price.toFixed(2) + '€')
 }
