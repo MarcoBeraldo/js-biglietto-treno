@@ -21,7 +21,7 @@ const priceKm = 0.21
 
 let isValid = 'false';
 
-if (isNaN(userDistance) || isNaN(userAge)) {
+if (isNaN(userDistance) && isNaN(userAge)) {
     isValid = true;
     console.log('il valore non è valido')
 }
@@ -40,7 +40,6 @@ if (isNaN(userDistance) || isNaN(userAge)) {
 
 let price = userDistance * 0.21
 console.log('il prezzo è: ' + price)
-
 
 // verifico se applicare gli sconti
 
